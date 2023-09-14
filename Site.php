@@ -29,6 +29,7 @@
     ?>
 
 <?php
+    echo "<h1>Working with variables</h1>";
     echo "<hr>";
     $phrase = "Hello";
     $integerAge = 45;
@@ -39,6 +40,7 @@
 ?>
 
 <?php
+    echo "<h1>Working with Strings</h1>";
     echo "<hr>";
     echo strtolower($phrase);
     echo "<br>";
@@ -60,7 +62,45 @@
      echo "<hr>";
      $phrase3 = "Giraffe academy";
      echo str_replace("Giraffe", "Panda", $phrase3);
-
 ?>
+
+<?php
+     echo "<hr>";
+     $phrase3 = "Giraffe Academy";
+     echo substr($phrase3, 8);
+     echo "<br>";
+     echo substr($phrase3, 8, 3);
+?>
+<?php
+    echo "<h1>Working with numbers</h1>";
+    echo "<hr>";
+    echo 456;
+    echo "<br>";
+    echo 456.99;
+    echo "<br>";
+    echo 56+40;
+    echo "<br>";
+    echo"The % sign in php is a mod and it gets the reminder so in this case its 90 divided
+    by 4 which in whole numbers can only be divided by 88 so only 2 reamian so it prints that out<br>";
+    echo 90%4;
+    echo "<br>";
+    $num = 10;
+    echo $num;
+    echo "<br>";
+    $num ++;
+    echo $num;
+    echo "<br>";
+    $num = 10;
+    $num --;
+    echo $num;
+    echo "<br>";
+    $num = 10;
+    $num += 25 ;
+    echo $num;
+
+
+     
+?>
+
 </body>
 </html>
