@@ -97,10 +97,15 @@
     $num = 10;
     $num += 25 ;
     echo $num;
+    echo "<br>";
+    echo pow(2, 4);
+    echo "<br>";
+    echo sqrt(144);
 
-
-     
 ?>
-
+<?php
+echo "<h1>Working with User inputs</h1>";
+echo "<hr>";
+?>
 </body>
 </html>
