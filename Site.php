@@ -104,8 +104,17 @@
 
 ?>
 <?php
-echo "<h1>Working with User inputs</h1>";
-echo "<hr>";
+    echo "<h1>Working with User inputs</h1>";
+    echo "<hr>";
+?>
+
+<form action="Site.php" method="get">
+    Name: <input type="text" name="Name"> 
+    <input type="submit">
+</form>
+<br>
+Your name is <?php
+echo $_GET["Name"]
 ?>
 </body>
 </html>
