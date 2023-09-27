@@ -8,7 +8,7 @@
     </title>
 </head>
 <body>
-    <?php
+<?php
     echo "<h1>hello world</h1>";
     echo "<hr>";
     echo"<p>Welcome to my new website</p>";
