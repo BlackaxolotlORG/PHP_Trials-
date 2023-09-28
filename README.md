@@ -44,3 +44,34 @@ This repository is open-source and designed for educational purposes. It does no
 
 This README provides a brief introduction and guide for beginners to start learning PHP basics using the repository. You can customize it further to suit your specific needs.
 
+
+
+
+// Connect to your MySQL database (replace with your credentials)
+$host = "localhost";
+$username = "your_username";
+$password = "your_password";
+$database = "your_database";
+
+$conn = new mysqli($host, $username, $password, $database);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to select stores and calculate distances
+$sql = "SELECT id, name, latitude, longitude, (6371 * ACOS(COS(RADIANS($userLatitude)) * COS(RADIANS(latitude)) * COS(RADIANS(longitude) - RADIANS($userLongitude)) + SIN(RADIANS($userLatitude)) * SIN(RADIANS(latitude)))) AS distance FROM stores ORDER BY distance ASC";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<h2>Nearest Stores:</h2>";
+    while ($row = $result->fetch_assoc()) {
+        echo "Store Name: " . $row["name"] . "<br>";
+        echo "Distance: " . round($row["distance"], 2) . " km<br><br>";
+    }
+} else {
+    echo "No stores found.";
+}
+
+$conn->close();
